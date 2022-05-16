@@ -17,4 +17,5 @@ type Query {
 
 type Mutation {
     addPlayer(player: PlayerDto): Player
+    deletePlayer(id: ID): String
 }

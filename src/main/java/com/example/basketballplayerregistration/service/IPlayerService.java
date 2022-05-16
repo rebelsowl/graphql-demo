@@ -9,4 +9,6 @@ public interface IPlayerService {
     List<Player> getPlayers();
 
     Player addPlayer(Player player);
+    void deletePlayer(int id);
+    
 }

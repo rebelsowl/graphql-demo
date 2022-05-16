@@ -17,5 +17,10 @@ public class PlayerMutationResolver implements GraphQLMutationResolver{
     public Player addPlayer(Player player){
         return playerService.addPlayer(player);
     }
+
+    public String deletePlayer(int id){
+        playerService.deletePlayer(id);
+        return  "Player deleted";
+    }
     
 }

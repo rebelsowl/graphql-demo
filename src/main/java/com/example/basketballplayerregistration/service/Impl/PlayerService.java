@@ -24,5 +24,10 @@ public class PlayerService implements IPlayerService {
     public Player addPlayer(Player player) {
         return playerRepository.save(player);
     }
+
+    @Override
+    public void deletePlayer(int id) {
+        playerRepository.deleteById(id);        
+    }
     
 }

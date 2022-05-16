@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-// import com.example.basketballplayerregistration.data.model.enums.PlayerPositionType;
+import com.example.basketballplayerregistration.data.model.enums.PlayerPositionType;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -27,8 +27,7 @@ public class Player {
     @Column(name = "surname", length = 20)
     private String surname;
 
-    @Column(name = "position", length = 20)
-    private String position;
-    //private PlayerPositionType position;
+    @Column(name = "position", length = 2)
+    private PlayerPositionType position;
     
 }

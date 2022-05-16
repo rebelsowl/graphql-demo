@@ -2,5 +2,5 @@
 
 
 
-voyager
-http://localhost:8080/voyager 
+graphiql
+http://localhost:8080/graphiql 

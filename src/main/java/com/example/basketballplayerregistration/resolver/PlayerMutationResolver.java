@@ -1,5 +1,6 @@
 package com.example.basketballplayerregistration.resolver;
 
+import com.example.basketballplayerregistration.data.model.dto.PlayerDto;
 import com.example.basketballplayerregistration.data.model.entity.Player;
 import com.example.basketballplayerregistration.service.IPlayerService;
 
@@ -14,7 +15,7 @@ public class PlayerMutationResolver implements GraphQLMutationResolver{
     @Autowired
     IPlayerService playerService;
 
-    public Player addPlayer(Player player){
+    public Player addPlayer(PlayerDto player){
         return playerService.addPlayer(player);
     }
 

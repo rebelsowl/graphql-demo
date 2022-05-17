@@ -21,6 +21,7 @@ import lombok.extern.log4j.Log4j2;
 @Log4j2
 @Service
 public class PlayerService implements IPlayerService {
+    public static final int TEAM_MAXIMUM_CAPACITY = 5;
 
     @Autowired
     PlayerRepository playerRepository;
@@ -35,6 +36,10 @@ public class PlayerService implements IPlayerService {
 
     @Override
     public Player addPlayer(PlayerDto player) {
+        // capacity check
+        if(playerRepository.count() > 4)
+            throw new IllegalStateException("Team is full");
+
         Set<ConstraintViolation<PlayerDto>> violations = validator.validate(player);
 
         if (!violations.isEmpty()) {

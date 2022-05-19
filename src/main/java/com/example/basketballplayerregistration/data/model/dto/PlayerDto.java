@@ -10,6 +10,7 @@ import lombok.Data;
 @Data
 public class PlayerDto {
     
+    // TODO: add spring validation
     @Size(min = 2, max = 20, message = "Name must be between 2 to 20 characters")
     private String name;
     
